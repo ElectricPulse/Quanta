@@ -1,3 +1,7 @@
+////////////////
+/// Project Resets
+////////////////
+
 html,
 body {
   padding: 0;
@@ -6,17 +10,35 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+html {
+  font-size: 10px;
 }
 
 * {
   box-sizing: border-box;
 }
 
+//////////////////////////////////
+/// Element Resets + Default Stylings
+//////////////////////////////////
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+/////////////////
+/// Site Grid Setup
+/////////////////
+
 #__next {
   display: grid;
-  grid-template-columns: [page-start] 1fr [content-end] 70vw [content-start] 1fr [page-end];
-  grid-template-rows: [navigation-start] min-content [navigation-end content-start] min-content [content-end footer-start] min-content [footer-end]
+  grid-template-columns: [page-start] 20rem [content-end] 1fr [content-start] 20rem [page-end];
+  grid-template-rows: [navigation-start] min-content [navigation-end content-start] min-content [content-end footer-start] min-content [footer-end];
 }

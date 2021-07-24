@@ -1,0 +1,7 @@
+.content {
+  grid-row: content-start / content-end;
+  grid-column: content-start / content-end;
+
+  display: flex;
+  gap: 2rem;
+}
