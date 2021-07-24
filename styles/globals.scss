@@ -15,4 +15,8 @@ a {
   box-sizing: border-box;
 }
 
-
+#__next {
+  display: grid;
+  grid-template-columns: [page-start] 1fr [content-end] 70vw [content-start] 1fr [page-end];
+  grid-template-rows: [navigation-start] min-content [navigation-end content-start] min-content [content-end footer-start] min-content [footer-end]
+}

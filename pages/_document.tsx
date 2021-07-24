@@ -4,20 +4,20 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
-} from "next/document";
+} from 'next/document'
 
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang='sk'>
-        <Head/>
+      <Html lang="sk">
+        <Head />
         <body>
           <Main />
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument
