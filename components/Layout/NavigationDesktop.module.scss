@@ -1,0 +1,37 @@
+@import '../../styles/variables';
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: $color-primary;
+  border-top: 5px solid $color-blue-1;
+  padding: 0 2rem;
+}
+
+.logo {
+  width: 27%;
+  margin: 1.5rem 0;
+}
+
+.links {
+  display: flex;
+
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: $color-white;
+
+  a {
+    padding: 1.5rem 1.65rem;
+
+    &:hover {
+      color: $color-primary;
+      background-color: $color-white;
+    }
+  }
+}
+
+.search-icon {
+  font-size: 2rem;
+  color: $color-white;
+}

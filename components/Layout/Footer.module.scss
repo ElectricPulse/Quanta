@@ -1,4 +1,79 @@
+@import '../../styles/variables';
+
 .footer {
   grid-row: footer-start / footer-end;
-  grid-column: content-start / content-end
+  grid-column: content-start / content-end;
+  background-color: $color-primary;
+
+  padding: 4rem 3.5rem;
+
+  color: $color-white;
+
+  display: flex;
+
+  @include screen($bp-5){
+    flex-direction: column;
+  }
+  
+  gap: 12%;
+  & > * {
+    flex: 1;
+  }
+}
+
+.logo {
+  margin-bottom: -4rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  &__contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    li a {
+      display: flex;
+
+      align-items: center;
+      gap: 2rem;
+
+      font-size: 1.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+  }
+}
+
+.icon {
+  width: 2.5rem;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.5rem;
+
+  &__title {
+    align-self: flex-start;
+    
+  }
+
+  &__links {
+    display: flex;
+
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+
+  li > a {
+    display: flex;
+    justify-content: space-between;
+  }
 }

@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.inverse {
+  color: $color-primary;
+
+  background-color: $color-white;
+}
+
+.normal {
+  color: $color-white;
+
+  background-color: $color-primary;
+}
+
+.normal,
+.inverse{
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}

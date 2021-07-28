@@ -1,43 +1,7 @@
-@import 'variables';
+@import '../../styles/variables';
 
 .header {
   grid-row: navigation-start/ navigation-end;
   grid-column: content-start / content-end;
 }
 
-.navigation {
-  display: flex;
-  justify-content: space-between;
-
-  background-color: $color-primary;
-  border-top: 3px solid $color-blue;
-  padding: 0 2rem;
-}
-
-.logo {
-  width: 20%;
-}
-
-.links {
-  display: flex;
-  justify-content: space-around;
-
-  font-size: 2rem;
-
-  a {
-    display: inline-block;
-    padding: 2rem;
-
-    color: $color-white;
-
-    &:hover {
-      color: $color-primary;
-      background-color: $color-white;
-    }
-  }
-}
-
-.search-icon {
-  width: 3rem;
-  color: $color-white;
-}

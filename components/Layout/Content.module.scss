@@ -1,7 +1,16 @@
+@import '../../styles/variables';
+
 .content {
   grid-row: content-start / content-end;
   grid-column: content-start / content-end;
 
   display: flex;
+  flex-direction: column;
   gap: 2rem;
+  margin-top: 1rem;
+  border: 1px solid $color-grey-1;
+
+  section {
+    border: 1px solid $color-grey-1;
+  }
 }

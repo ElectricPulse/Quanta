@@ -1,0 +1,18 @@
+@import '../../../styles/variables';
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  & > * {
+    flex-basis: calc((#{$bp-image-large} - 100%) * 999);
+    flex-grow: 1;
+  }
+}
+
+.subgrid {
+  gap: inherit;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+}

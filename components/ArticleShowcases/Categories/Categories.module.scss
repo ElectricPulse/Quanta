@@ -1,0 +1,13 @@
+@import '../../../styles/variables';
+
+.categories {
+  display: flex;
+
+  @include screen($bp-5) {
+    flex-direction: column;
+  }
+
+  & > *:nth-child(odd) {
+    background-color: $color-blue-2;
+  }
+}

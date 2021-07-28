@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.category {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.8rem;
+}
+
+.title {
+  font-size: 1.4rem;
+}

@@ -1,0 +1,28 @@
+@import '../../../styles/variables';
+
+.section {
+  padding: 1.8rem 2rem 6rem 2rem;
+  background-color: $color-grey-2;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.grid {
+  gap: 5rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  display: grid;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  a {
+    transition: all 0.2s;
+  }
+  a:hover {
+    color: $color-link-hover;
+  }
+}
