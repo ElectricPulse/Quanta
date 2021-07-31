@@ -15,16 +15,22 @@ $color-blue-2: rgb(149, 170, 191);
 $color-link-hover: blue;
 
 ////////////////
+/// Other Variables
+////////////////
+
+$border: 1px solid rgb(207, 207, 207);
+$fillet: 5px;
+$shadow: 8px 8px 10px rgb(black, 0.2);
+
+////////////////
 /// Breakpoints
 ////////////////
 
 $bp-1: 1600px;
-$bp-2: 1300px;
-$bp-3: 1100px;
-$bp-4: 900px;
-$bp-5: 700px;
+$bp-2: 1000px;
+$bp-3: 900px;
+$bp-4: 700px;
 
-$bp-image-large: 500px;
 
 ////////////////
 /// Mixins

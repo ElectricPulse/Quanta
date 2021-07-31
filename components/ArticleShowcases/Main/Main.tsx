@@ -10,12 +10,12 @@ interface Props {
 const Main: React.FC<Props> = (props) => {
   return (
     <section className={styles.grid}>
-      <Article article={props.articles[0]} />
+      <Article size="big" aspectRatio={'3/2'} article={props.articles[0]} />
       <div className={`${styles.subgrid}`}>
-        <Article article={props.articles[1]}/>
-        <Article article={props.articles[2]}/>
-        <Article article={props.articles[3]}/>
-        <Article article={props.articles[4]}/>
+        <Article size="small" article={props.articles[1]} />
+        <Article size="small" article={props.articles[2]} />
+        <Article size="small" article={props.articles[3]} />
+        <Article size="small" article={props.articles[4]} />
       </div>
     </section>
   )

@@ -2,12 +2,14 @@
 
 .categories {
   display: flex;
-
-  @include screen($bp-5) {
-    flex-direction: column;
-  }
+  flex-wrap: wrap;
 
   & > *:nth-child(odd) {
     background-color: $color-blue-2;
+  }
+
+  & > * {
+    flex: 1;
+    flex-basis: calc((#{$bp-4} - 100%) * 999);
   }
 }

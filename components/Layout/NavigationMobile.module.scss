@@ -1,15 +1,85 @@
 @import '../../styles/variables';
 
 .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: $color-primary;
+  padding: calc(5px + 2vw) calc(10px + 3vw);
 }
 
 .logo {
-}
-
-.links {
+  width: 180px;
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 42px;
   color: $color-white;
+
+  &__close {
+    align-self: flex-end;
+    font-size: 40px;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1;
+
+  transition: transform ease 0.4s,
+    backdrop-filter cubic-bezier(0.9, 0, 0.9, 0) 0.45s;
+
+  & * {
+    z-index: inherit;
+  }
+
+  &--visible {
+    transform: translateX(0px);
+    backdrop-filter: blur(4px);
+  }
+
+  &--hidden {
+    transform: translateX(-100%);
+    backdrop-filter: blur(0);
+  }
+
+  &__content {
+    width: 90%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    color: $color-white;
+    padding: 8vw;
+    background: linear-gradient(
+      to bottom right,
+      $color-primary 12%,
+      $color-secondary 90%
+    );
+  }
+}
+
+.click-blocker {
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background-color: transparent;
+
+  z-index: -1;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  color: currentColor;
+  font-size: 1.4rem;
+  font-weight: 700;
 }

@@ -1,17 +1,13 @@
 import React from 'react'
 
-import Navigation from './Header'
+import Header from './Header'
 import Content from './Content'
 import Footer from './Footer'
 
-interface Props {
-  children: React.ReactNode
-}
-
-const Layout: React.FC<Props> = (props) => {
+const Layout: React.FC = (props) => {
   return (
     <>
-      <Navigation />
+      <Header mobileNavBp={700} />
       <Content>{props.children}</Content>
       <Footer />
     </>

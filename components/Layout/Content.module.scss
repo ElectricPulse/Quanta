@@ -6,11 +6,16 @@
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-top: 1rem;
-  border: 1px solid $color-grey-1;
+  gap: calc( 2vw);
+
+  border: $border;
+
+  @include screen($bp-4) {
+    margin-top: 0;
+    gap: 0;
+  }
 
   section {
-    border: 1px solid $color-grey-1;
+    border: inherit;
   }
 }

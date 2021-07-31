@@ -1,6 +1,6 @@
 import React from 'react'
-
 import styles from './Footer.module.scss'
+
 import Image from 'next/image'
 import logoWhite from '../../public/images/logo-white.png'
 
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <div className={styles.details}>
         <a href="https://quanta.sk" className={styles.logo}>
-          <Image src={logoWhite}></Image>
+          <Image src={logoWhite}/>
         </a>
         <p className={styles['details__text']}>
           Quanta mapuje najnovšie trendy v čiernej a bielej technike, prináša
@@ -57,32 +57,27 @@ const Footer: React.FC = () => {
         <ul className={styles['categories__links']}>
           <li>
             <a href="https://quanta.sk">
-              <span>Quanta BLACK</span>
-              <span>335</span>
+              Quanta BLACK
             </a>
           </li>
           <li>
             <a href="https://quanta.sk">
-              <span>Quanta SMART</span>
-              <span>124</span>
+              Quanta SMART
             </a>
           </li>
           <li>
             <a href="https://quanta.sk">
-              <span>Quanta WHITE</span>
-              <span>43</span>
+              Quanta WHITE
             </a>
           </li>
           <li>
             <a href="https://quanta.sk">
-              <span>Mobily</span>
-              <span>27</span>
+              Mobily
             </a>
           </li>
           <li>
             <a href="https://quanta.sk">
-              <span>Počítače</span>
-              <span>68</span>
+              Počítače
             </a>
           </li>
         </ul>

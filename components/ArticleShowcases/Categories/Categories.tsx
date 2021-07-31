@@ -2,36 +2,18 @@ import React from 'react'
 import styles from './Categories.module.scss'
 
 import Category from './Category'
+import { Props as ArticleType } from './Article'
 
-const articles = [
-  {
-    imageName: 'maxresdefault-15_fk7kka',
-    url: 'https://www.google.sk/',
-    title: 'Preco ceny telefonov stale neustupaju',
-  },
-  {
-    imageName: 'maxresdefault-15_fk7kka',
-    url: 'https://www.google.sk/',
-    title: 'Title2',
-  },
-  {
-    imageName: 'maxresdefault-15_fk7kka',
-    url: 'https://www.google.sk/',
-    title: 'Title3',
-  },
-  {
-    imageName: 'maxresdefault-15_fk7kka',
-    url: 'https://www.google.sk/',
-    title: 'Novy rychlotest na koronavirus od spolocnosti Bosch prinase spolahilve vysledky uz za 39 minut joj to je rychlo wow strasne dlhe je toto'
-  },
-]
+interface Props {
+  categories: { category: string; articles: ArticleType[] }[]
+}
 
-const Categories: React.FC = () => {
+const Categories: React.FC<Props> = (props) => {
   return (
     <section className={styles.categories}>
-      <Category name={'Quanta BLACK'} articles={articles} />
-      <Category name={'Quanta WHITE'}  articles={articles} />
-      <Category name={'Quanta SMART'}  articles={articles} />
+      {props.categories.map(({ category, articles }) => {
+        return <Category key={category} name={category} articles={articles} />
+      })}
     </section>
   )
 }

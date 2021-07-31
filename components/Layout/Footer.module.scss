@@ -3,77 +3,83 @@
 .footer {
   grid-row: footer-start / footer-end;
   grid-column: content-start / content-end;
-  background-color: $color-primary;
-
-  padding: 4rem 3.5rem;
-
-  color: $color-white;
 
   display: flex;
+  flex-wrap: wrap;
+  gap: calc(18px + 5vw);
 
-  @include screen($bp-5){
-    flex-direction: column;
-  }
-  
-  gap: 12%;
+  color: $color-white;
+  background-color: $color-primary;
+  padding: calc(5px + 2.5vw);
+
   & > * {
-    flex: 1;
+    flex-grow: 1;
+    flex-basis: calc((#{$bp-4} - 100%) * 999);
   }
 }
 
 .logo {
-  margin-bottom: -4rem;
+  margin-bottom: -30px;
 }
 
 .details {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: calc(15px + 3vw);
 
   &__contact-links {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: calc(20px + 2vw);
 
-    li a {
+    li > a {
       display: flex;
 
       align-items: center;
-      gap: 2rem;
+      gap: calc(12px + 1vw);
 
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 
   &__text {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
 .icon {
-  width: 2.5rem;
+  font-size: calc(20px + 0.4vw);
 }
 
 .categories {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  font-size: 1.5rem;
+  gap: calc(18px + 2vw);
+  font-size: 1.1rem;
 
   &__title {
     align-self: flex-start;
-    
   }
 
   &__links {
     display: flex;
 
     flex-direction: column;
-    gap: 1.3rem;
+    gap: calc(8px + 1.5vw);
   }
 
   li > a {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  li > a::after {
+    content: '';
+    $size: 12px;
+    width: $size;
+    height: $size;
+    background-color: currentColor;
+    border-radius: 50%;
   }
 }

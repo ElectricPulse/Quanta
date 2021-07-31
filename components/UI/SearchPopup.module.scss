@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+.search {
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 100%;
+
+  padding: 14px;
+  z-index: 1;
+  box-shadow: $shadow;
+  border: $border;
+  background-color: $color-white;
+
+  span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $color-white;
+    background-color: $color-black;
+    border-radius: 0 $fillet $fillet 0;
+    padding: 8px 13px;
+  }
+
+  input {
+    border: $border;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -16px;
+    bottom: 100%;
+    right: 15%;
+
+    aspect-ratio: 1 / 1;
+
+    background-color: $color-white;
+    clip-path: polygon(50% 35%, 0% 100%, 100% 100%);
+  }
+}

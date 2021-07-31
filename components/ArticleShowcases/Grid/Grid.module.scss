@@ -1,27 +1,37 @@
 @import '../../../styles/variables';
 
 .section {
-  padding: 1.8rem 2rem 6rem 2rem;
-  background-color: $color-grey-2;
   display: flex;
-  gap: 2rem;
   flex-direction: column;
+  gap: calc(5px + 3vw);
+  padding: 2vw;
+  background-color: $color-grey-2;
 }
 
-.grid {
-  gap: 5rem;
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
 
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  & > * {
+    display: grid;
+    gap: inherit;
+    $columns: 2;
+    grid-template-columns: repeat($columns, 1fr);
 
-  display: grid;
+    flex-grow: 1;
+    flex-basis: calc((#{$bp-4} - 100%) * 999);
+  }
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
+
   a {
     transition: all 0.2s;
   }
+
   a:hover {
     color: $color-link-hover;
   }

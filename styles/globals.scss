@@ -9,19 +9,12 @@ body {
 }
 
 html {
-  font-size: 10px;
-
-  @include screen($bp-1) {
-    font-size: 9.5px;
+  font-size: 14px;
+  @include screen(bp-2){
+    font-size: 13px;
   }
-  @include screen($bp-2) {
-    font-size: 9px;
-  }
-  @include screen($bp-3) {
-    font-size: 8.5px;
-  }
-  @include screen($bp-4) {
-    font-size: 7.5px;
+  @include screen(bp-3){
+    font-size: 11px;
   }
 }
 
@@ -50,29 +43,29 @@ ul {
   list-style-type: none;
 }
 
+input {
+  border: none;
+  border-radius: none;
+  outline: none;
+  line-height: 1.3;
+  padding: 3px;
+  font-family: inherit;
+}
+
 /////////////////
 /// Site Grid Setup
 /////////////////
 
 #__next {
   display: grid;
-  grid-template-columns: [page-start] 12vw [content-end] 1fr [content-start] 12vw [page-end];
+  grid-template-columns: [page-start] 10vw [content-end] 1fr [content-start] 10vw [page-end];
   grid-template-rows: [navigation-start] min-content [navigation-end content-start] min-content [content-end footer-start] min-content [footer-end];
-
-  @include screen($bp-1) {
-    grid-template-columns: [page-start] 8vw [content-end] 1fr [content-start] 8vw [page-end];
-  }
-
   
   @include screen($bp-2) {
-    grid-template-columns: [page-start] 5vw [content-end] 1fr [content-start] 5vw [page-end];
+    grid-template-columns: [page-start] 4vw [content-end] 1fr [content-start] 4vw [page-end];
   }
 
   @include screen($bp-3) {
-    grid-template-columns: [page-start] 3vw [content-end] 1fr [content-start] 3vw [page-end];
-  }
-  
-  @include screen($bp-4) {
     grid-template-columns: [page-start] 0 [content-end] 1fr [content-start] 0 [page-end];
   }
 }

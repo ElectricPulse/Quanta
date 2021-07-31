@@ -9,20 +9,31 @@ export interface Article {
   title: string
 }
 
-interface Props {
+const Article: React.FC<{
   article: Article
-}
+  aspectRatio?: string
+  size: 'big' | 'small'
+}> = ({ aspectRatio, article, size }) => {
+  let ArticleTitle: keyof JSX.IntrinsicElements;
 
-const Article: React.FC<Props> = ({ article }) => {
+  switch (size) {
+    case 'big':
+      ArticleTitle = 'h2' 
+      break
+    case 'small':
+      ArticleTitle = 'h3'
+      break
+  }
+
   return (
     <a href={article.url} className={styles.article}>
       <div className={styles.details}>
-        <h2>{article.title}</h2>
+        <ArticleTitle>{article.title}</ArticleTitle>
       </div>
       <ExternalImage
         imageName={article.imageName}
         className={styles.image}
-        aspectRatio={'3 / 2'}
+        aspectRatio={aspectRatio && aspectRatio}
       />
     </a>
   )
