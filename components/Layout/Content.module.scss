@@ -1,12 +1,9 @@
 @import '../../styles/variables';
 
 .content {
-  grid-row: content-start / content-end;
-  grid-column: content-start / content-end;
-
   display: flex;
   flex-direction: column;
-  gap: calc( 2vw);
+  gap: calc(2vw);
 
   border: $border;
 

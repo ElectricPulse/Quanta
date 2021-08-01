@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styles from './NavigationMobile.module.scss'
+import joinClasses from 'utils/joinClasses'
 
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,21 +9,11 @@ import SearchPopup from 'components/UI/SearchPopup'
 
 import useToggleState from 'hooks/useToggleState'
 
-const Menu: React.FC = () => {
-  return (
-    <nav className={styles.links}>
-      <a>DOMOV</a>
-      <a>TESTY</a>
-      <a>QUANTA WHITE</a>
-      <a>QUANTA BLACK</a>
-      <a>QUANTA SMART</a>
-      <a>PR SPRÁVY</a>
-      <a>O NÁS</a>
-    </nav>
-  )
+interface Props {
+  className?: string;
 }
 
-const NavigationMobile: React.FC = () => {
+const NavigationMobile: React.FC<Props> = (props) => {
   const [menuVis, toggleMenuVis] = useToggleState(false)
 
   return (
@@ -50,7 +41,7 @@ const NavigationMobile: React.FC = () => {
         </div>
       </div>
 
-      <div className={styles.navigation}>
+      <div className={joinClasses(styles.navigation, props.className)}>
         <button onClick={toggleMenuVis}>
           <FontAwesomeIcon className={styles.icon} icon={'grip-horizontal'} />
         </button>
@@ -62,7 +53,6 @@ const NavigationMobile: React.FC = () => {
           <FontAwesomeIcon className={styles.icon} icon={'search'} />
         </SearchPopup>
       </div>
-  
     </>
   )
 }

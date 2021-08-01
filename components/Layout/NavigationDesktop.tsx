@@ -1,18 +1,22 @@
 import React from 'react'
 import styles from './NavigationDesktop.module.scss'
+import joinClasses from 'utils/joinClasses'
 
-import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import logoBlack from '../../public/images/logo-black.png'
 import SearchPopup from 'components/UI/SearchPopup'
 
-const NavigationDesktop: React.FC = () => {
+interface Props {
+  className?: string;
+}
+
+const NavigationDesktop: React.FC<Props> = (props) => {
   return (
-    <>
-      <h1 className={styles.logo}>
-        <Image src={logoBlack} layout="responsive" />
-      </h1>
-      <div className={styles.navigation}>
+      <div
+        className={joinClasses(
+          styles.navigation,
+          props.className
+        )}
+      >
         <nav className={styles.links}>
           <a>TESTY</a>
           <a>
@@ -31,7 +35,6 @@ const NavigationDesktop: React.FC = () => {
           <FontAwesomeIcon className={styles.icon} icon={'search'} />
         </SearchPopup>
       </div>
-    </>
   )
 }
 
