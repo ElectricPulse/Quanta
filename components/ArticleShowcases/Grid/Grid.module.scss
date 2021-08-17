@@ -11,13 +11,12 @@
 .articles {
   display: flex;
   flex-wrap: wrap;
-  gap: 2vw;
+  gap: calc(20px + 2vw);
 
   & > * {
     display: grid;
     gap: inherit;
-    $columns: 2;
-    grid-template-columns: repeat($columns, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     flex-grow: 1;
     flex-basis: calc((#{$bp-4} - 100%) * 999);

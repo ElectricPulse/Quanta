@@ -10,7 +10,7 @@ import SearchPopup from 'components/UI/SearchPopup'
 import useToggleState from 'hooks/useToggleState'
 
 interface Props {
-  className?: string;
+  className?: string
 }
 
 const NavigationMobile: React.FC<Props> = (props) => {

@@ -1,22 +1,22 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import {
-  faSearch,
-  fas,
-  faPhoneAlt,
-  faAt,
-  faGripHorizontal,
-  faTimes,
-} from '@fortawesome/free-solid-svg-icons'
-import { fab, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons'
-
-import Main from '../components/ArticleShowcases/Main/Main'
+import Headline from '../components/ArticleShowcases/Headline/Headline'
 import Categories from '../components/ArticleShowcases/Categories/Categories'
 import Grid from '../components/ArticleShowcases/Grid/Grid'
+import deepMap from './../utils/deepMap'
 
-library.add(fas, faSearch, faPhoneAlt, faAt, faGripHorizontal, faTimes)
-library.add(fab, faTwitter, faFacebook)
+const array = [
+  [
+    ['hey 2', 'this', 'should'],
+    ['is', 'that', 'working'],
+    ['yes', 'it', 'is'],
+  ],
+  [
+    ['hey 1', 'this', 'should'],
+    ['is', 'that', 'working'],
+    ['yes', 'it', 'is'],
+  ],
+]
 
 class Article {
   imageName = 'maxresdefault-15_fk7kka'
@@ -41,7 +41,9 @@ const createArticles = (length: number) => {
 const Home: React.FC = () => {
   return (
     <>
-      <Main articles={createArticles(5)} />
+
+
+      <Headline articles={createArticles(5)} />
       <Categories
         categories={Array(3)
           .fill(null)
@@ -51,7 +53,9 @@ const Home: React.FC = () => {
             return { category, articles: createArticles(4) }
           })}
       />
-      <Grid articles={createArticles(8)} />
+      <Grid articles={createArticles(8)}>
+        Novinky z <a href={'https://www.startstop.sk/'}>STARTSTOP.sk</a>
+      </Grid>
     </>
   )
 }

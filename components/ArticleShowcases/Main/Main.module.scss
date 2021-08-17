@@ -1,20 +1,7 @@
-@import '../../../styles/variables';
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: calc(5px + 1vw);
-
-  & > * {
-    flex-grow: 1;
-    flex-basis: calc((#{$bp-4} - 100%) * 999);
-  }
-}
-
-.subgrid {
-  display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-  gap: inherit;
-
-  aspect-ratio: 3 / 2;
+.section {
+    display: flex;
+    & > * {
+        flex-grow: 1;
+        flex-basis: calc((900px - 100%) * 999)
+    }
 }

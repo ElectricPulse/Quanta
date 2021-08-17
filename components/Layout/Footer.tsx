@@ -5,14 +5,14 @@ import Image from 'next/image'
 import logoWhite from '../../public/images/logo-white.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Hightlighted from './../UI/Highlighted';
+import Hightlighted from './../UI/Highlighted'
 
 const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.details}>
         <a href="https://quanta.sk" className={styles.logo}>
-          <Image src={logoWhite}/>
+          <Image src={logoWhite} />
         </a>
         <p className={styles['details__text']}>
           Quanta mapuje najnovšie trendy v čiernej a bielej technike, prináša
@@ -53,32 +53,24 @@ const Footer: React.FC = () => {
         </ul>
       </div>
       <div className={styles.categories}>
-        <h4 className={styles['categories__title']}><Hightlighted inverse >POPULÁRNE KATEGÓRIE</Hightlighted></h4>
+        <h4 className={styles['categories__title']}>
+          <Hightlighted inverse>POPULÁRNE KATEGÓRIE</Hightlighted>
+        </h4>
         <ul className={styles['categories__links']}>
           <li>
-            <a href="https://quanta.sk">
-              Quanta BLACK
-            </a>
+            <a href="https://quanta.sk">Quanta BLACK</a>
           </li>
           <li>
-            <a href="https://quanta.sk">
-              Quanta SMART
-            </a>
+            <a href="https://quanta.sk">Quanta SMART</a>
           </li>
           <li>
-            <a href="https://quanta.sk">
-              Quanta WHITE
-            </a>
+            <a href="https://quanta.sk">Quanta WHITE</a>
           </li>
           <li>
-            <a href="https://quanta.sk">
-              Mobily
-            </a>
+            <a href="https://quanta.sk">Mobily</a>
           </li>
           <li>
-            <a href="https://quanta.sk">
-              Počítače
-            </a>
+            <a href="https://quanta.sk">Počítače</a>
           </li>
         </ul>
       </div>

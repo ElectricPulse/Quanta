@@ -14,7 +14,7 @@ const Grid: React.FC<Props> = (props) => {
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>
-        Novinky z <a href={'https://www.startstop.sk/'}>STARTSTOP.sk</a>
+        {props.children}
       </h2>
       <div className={styles.articles}>
         {articleChunks.map((articleChunk) => {

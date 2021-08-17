@@ -8,7 +8,6 @@
   border: $border;
 
   @include screen($bp-4) {
-    margin-top: 0;
     gap: 0;
   }
 

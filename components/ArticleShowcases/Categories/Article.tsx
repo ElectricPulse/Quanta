@@ -13,8 +13,7 @@ const Article: React.FC<Props> = ({ title, imageName, url }) => {
   return (
     <li>
       <a className={styles.article} href={url}>
-          <ExternalImage aspectRatio={'4 / 3'} imageName={imageName} />
-
+        <ExternalImage aspectRatio={'3 / 2'} imageName={imageName} />
         <h3>{title}</h3>
       </a>
     </li>

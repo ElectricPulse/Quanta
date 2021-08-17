@@ -12,9 +12,8 @@ const Article: React.FC<{ article: Article }> = ({ article }) => {
   return (
     <div>
       <a href={article.url}>
-        <div className={styles['image-container']}>
-          <ExternalImage aspectRatio='1 / 1' imageName={article.imageName} />
-        </div>
+        <ExternalImage aspectRatio="1 / 1" imageName={article.imageName} />
+
         <h3>{article.title}</h3>
       </a>
     </div>

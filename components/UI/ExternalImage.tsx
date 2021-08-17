@@ -2,6 +2,7 @@ import React from 'react'
 import { buildUrl } from 'cloudinary-build-url'
 import Image from 'next/image'
 import styles from './ExternalImage.module.scss'
+import joinClasses from './../../utils/joinClasses';
 
 type Props = {
   imageName: string
@@ -21,7 +22,7 @@ const ExternalImage: React.FC<Props> = (props) => {
       <Image
         src={imageUrl}
         layout="fill"
-        className={`${props.className} ${styles.image}`}
+        className={joinClasses(props.className, styles.image)}
       />
     </div>
   )

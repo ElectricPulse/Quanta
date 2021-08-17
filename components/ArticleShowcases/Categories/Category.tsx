@@ -2,6 +2,7 @@ import React from 'react'
 import Article, { Props as ArticleType } from './Article'
 import styles from './Category.module.scss'
 import Hightlighted from './../../UI/Highlighted'
+import joinClasses from './../../../utils/joinClasses'
 
 interface Props {
   className?: string
@@ -11,7 +12,7 @@ interface Props {
 
 const Category: React.FC<Props> = (props) => {
   return (
-    <div className={`${styles.category} ${props.className && props.className}`}>
+    <div className={joinClasses(styles.category, props.className)}>
       <h4 className={styles.title}>
         <Hightlighted>{props.name}</Hightlighted>
       </h4>
