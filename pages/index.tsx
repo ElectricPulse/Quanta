@@ -54,6 +54,7 @@ const Home: React.FC = () => {
           })}
       />
       <Grid articles={createArticles(8)}>
+        
         Novinky z <a href={'https://www.startstop.sk/'}>STARTSTOP.sk</a>
       </Grid>
     </>
